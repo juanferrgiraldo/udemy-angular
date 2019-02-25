@@ -18,7 +18,7 @@ export class RecipeService {
       ]),
     new Recipe('Another test recipe', 
       'This is another test recipe', 
-      'https://get.pxhere.com/photo/dish-meal-food-produce-recipe-fish-breakfast-meat-pork-cuisine-steak-pork-chop-power-dishes-grilling-fried-food-604134.jpg',
+      'https://previews.123rf.com/images/genmike/genmike1411/genmike141100010/33951440-burger-and-french-fries.jpg',
       [
         new Ingredient('Bonus', 2),
         new Ingredient('Meat', 1)
@@ -33,5 +33,9 @@ export class RecipeService {
 
   onAddIngredientsToShoppingList(ingredients: Ingredient[]) {
     this.shoppingListService.addIngredients(ingredients);
+  }
+
+  getRecipe(index:number) {
+    return this.recipes[index];
   }
 }
